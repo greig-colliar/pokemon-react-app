@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom'
 import About from './About';
 import Home from './Home';
 import {useEffect, useState} from 'react';
@@ -24,14 +24,23 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <h1 className="text-2xl">It's working now???</h1>
-        <home
+      <div className="p-14">
+        <div className="flex flex-col items-center">
+          <Link to ="/">
+            <header className="text-4xl text-yellow-400">Pokemon Picker</header>
+          </Link>
+
+        </div>
       </div>
 
       <Switch>
         <Route path="/about/:slug">
           <About></About>
+        </Route>
+        <Route path = "/">
+        {pokemon && 
+          <Home pokemon={pokemon.results}/>
+        }
         </Route>
       </Switch>
     </Router>
