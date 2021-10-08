@@ -29,7 +29,7 @@ that browses pokemon and returns results on a single page without having to refr
 
 ### Setup
 
-- git clone `https://github.com/greigac/pokemon-react-app`
+- git clone `https://github.com/greig-colliar/pokemon-react-app`
 - cd React-Pokemon-App
 - run npm install
 - run npm run start
